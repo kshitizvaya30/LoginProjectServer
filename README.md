@@ -1,5 +1,10 @@
 # LoginProjectServer
 
+# Install Dependency
+Use "npm install" to install all dependencies
+
+# Run Command 
+Use "node app.js" to run the server on localhost 8080 port
 
 //Database Tables
 -- User Table

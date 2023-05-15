@@ -26,7 +26,7 @@ app.use(
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 // deleteItemsByUserId(38);
-// createItems(38,150);
+// createItems(3,150);
 
 app.post("/api/signIn", async (req, res) => {
   const { loginId, password } = req.body;
@@ -52,7 +52,7 @@ app.post("/api/signUp", async (req, res) => {
   const encryptPass = encrypt(password);
   const success = await signupUser(name, email, phone_number, encryptPass);
 
-  if (succes === "User Signed Up") {
+  if (success === "User Signed Up") {
     const id = await getUserIdByEmail(email);
     // console.log(encryptPass);
     res.status(200).send({ id: id });
